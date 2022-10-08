@@ -1,0 +1,47 @@
+<div class="row top_heading">
+  <div class="col-sm-12 col-md-8">
+    <h2 class="font-bold heading">Transaction list</h2>
+  </div>
+  <div class="col-sm-12 col-md-4 d-flex justify-content-end">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="view_btn">
+          <button type="submit" class="btn secondry-btn font-medium">Search Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="table-section table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="font-medium">Processing Date</th>
+        <th class="font-medium">Payment Date</th>
+        <th class="font-medium">Transaction Id</th>
+        <th class="font-medium">Amount</th>
+        <th class="font-medium">Payment Status</th>
+        <th class="font-medium">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of transactionList; let i = index">
+        <td style="color: #474a5c">{{ item?.start_time * 1000 | date: "dd MMM yyyy a" }}</td>
+        <td style="color: #474a5c">{{ item?.start_time * 1000 | date: "dd MMM yyyy a" }}</td>
+        <td style="color: #474a5c">{{ item?.booking_id }}</td>
+        <td style="color: #474a5c">${{ item?.amount }}</td>
+        <td style="color: #474a5c">{{ item?.payment_status }}</td>
+        <td style="color: #474a5c"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

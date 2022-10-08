@@ -1,0 +1,38 @@
+.join_us_section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .join_us_banner {
+        //  background:  url('/assets/img/join_us.png')  ;
+        background-color: #FE594E;
+        min-height: 400px;
+        max-height: 400px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+.join_heading{
+    padding-bottom: 1rem;
+}
+    .get_start_btn{
+
+        .get-start{
+            background: #ffffff;
+            color: #FE594E;
+            padding: .6rem 1.5rem;
+            box-shadow: 0px 0px 17px #FE594E3B;
+            border-radius: 5px;
+            letter-spacing: 0.52px;
+            // font:  18px/22px 'Euclid_Circular_B_font_medium';
+
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .join_us_section   .join_us_banner {
+        min-height: 600px;
+        max-height: 600px;
+    }
+}

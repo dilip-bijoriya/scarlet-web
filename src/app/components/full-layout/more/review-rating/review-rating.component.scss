@@ -1,0 +1,68 @@
+.top_heading {
+    padding-bottom: 1rem;
+    .heading {
+        letter-spacing: 1.73px;
+        line-height: 45px;
+        position: relative;
+    }
+
+    .heading::after {
+        content: "";
+        border: 2px solid #FB634F;
+        display: block;
+        position: absolute;
+        left: 0;
+        margin: auto;
+        width: 100px;
+        transform: -50%, -50%;
+    }
+}
+.second-card {
+    p {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .row {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      max-height: 160px;
+      min-height: 160px;
+      border-radius: 15px;
+    }
+  
+    .img-sec img {
+      max-height: 160px;
+      min-height: 160px;
+    }
+    .small-text {
+      align-items: center;
+  
+      .fa {
+        color: #fb634f;
+        padding-right: 10px;
+      }
+    }
+  
+    .star_text .fa {
+      color: #fe594e;
+      padding-left: 0;
+    }
+  
+    .btn-section {
+      .right-side {
+        padding-bottom: 1rem;
+      }
+    }
+  
+    .right-side {
+      .primary-btn {
+        padding: 0.4rem .6rem;
+      }
+  
+      .secondry-btn {
+        max-width: 85%;
+        padding: 0.4rem 1rem;
+      }
+    }
+  }

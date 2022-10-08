@@ -1,0 +1,55 @@
+<div class="top_heading">
+  <h2 class="font-bold heading">Review & Rating</h2>
+</div>
+<div class="second-card">
+  <div class="row" *ngFor="let item of myJson">
+    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2">
+      <div class="img-sec">
+        <img src="{{ item.user_pic }}" alt="" />
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8 col-lg-6 col-xl-8">
+      <div class="text-section">
+        <h3 style="color: #fe594e">{{ item.firstname }}</h3>
+        <span>
+          <p class="small-text d-flex">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <!-- 06 May 2020, 9:45 AM-10:00 AM -->
+            {{ item.created_on * 1000 | date: "dd MMM yyy HH:mm a" }}
+          </p>
+          <p class="small-text d-flex">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            {{ item.created_on * 1000 | date: "dd MMM yyy HH:mm a" }}
+          </p>
+          <p class="small-text d-flex">
+            <span class="d-flex align-items-center">
+              <i class="fa fa-location-arrow" aria-hidden="true"></i>
+              <p>2.5 km</p>
+            </span>
+            <span class="d-flex align-items-center mx-4">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <p>2 Services</p>
+            </span>
+            <span class="d-flex align-items-center">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <p>Michael Harold</p>
+            </span>
+          </p>
+        </span>
+
+        <div class="star_text">
+          <i class="fa fa-star"></i>
+          <span class="rating">{{ item.stars }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
+      <div class="btn-section">
+        <div class="right-side">
+          <button type="submit" (click)="rateSaloon()" class="btn primary-btn">Rated saloon</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

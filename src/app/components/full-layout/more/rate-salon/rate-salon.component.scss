@@ -1,0 +1,26 @@
+.top_heading {
+    padding-bottom: 1rem;
+    .heading {
+        letter-spacing: 1.73px;
+        line-height: 45px;
+        position: relative;
+    }
+
+    .heading::after {
+        content: "";
+        border: 2px solid #FB634F;
+        display: block;
+        position: absolute;
+        left: 0;
+        margin: auto;
+        width: 100px;
+        transform: -50%, -50%;
+    }
+}
+.second-card{
+    height: 70vh;
+}
+.star_text .fa {
+    color: #FE594E;
+    padding-left: 0;
+}

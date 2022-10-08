@@ -1,0 +1,47 @@
+ul {
+    padding-left: 0;
+    padding-top: 2rem;
+    li {
+        padding: 1rem;
+        list-style: none;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: #737374;
+        }
+    }
+    .fa {
+        color: #737374;
+        padding-right: 1rem;
+    }
+    .version {
+        position: absolute;
+        bottom: 60px;
+        left: 30px;
+    }
+}
+
+.nav-link:hover {
+    background: #FB634F;
+    color: white;
+}
+
+.nav-link:hover a,
+.fa {
+    color: white;
+}
+
+.nav-link:hover .fa {
+    color: white;
+}
+
+.nav-link.active {
+    background: #FB634F;
+    color: white;
+    a {
+        color: white;
+    }
+    .fa {
+        color: white;
+    }
+}

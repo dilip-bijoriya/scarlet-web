@@ -1,0 +1,68 @@
+.inner-section{
+    display: flex;
+    justify-content: space-between;
+}
+.second-card{
+    border-radius: 15px;
+    padding: .5rem;
+    .img-sec img{
+        width: 50px;
+    }
+    .text-sec p{
+        white-space: nowrap;
+    }
+}
+.top_heading {
+    .heading {
+        letter-spacing: 1.73px;
+        line-height: 45px;
+        position: relative;
+    }
+
+    .heading::after {
+        content: "";
+        border: 2px solid #FB634F;
+        display: block;
+        position: absolute;
+        left: 0;
+        margin: auto;
+        width: 100px;
+        transform: -50%, -50%;
+    }
+
+
+}
+
+.user-sec img {
+    height: 50px;
+    width: 50px;
+
+}
+.btn-sec{
+    padding-top: 1rem;
+}
+.secondry-btn {
+    padding: 0.4rem 0.4rem;
+    font-size: small;
+}
+.primary-btn {
+    padding: 0.4rem 0.4rem;
+    font-size: small;
+
+}
+.form-switch{
+    padding-left: 0;
+}
+.form-switch .form-check-input {
+    margin-left: 0; 
+}
+.form-check-input:checked {
+    background-color: #FB634F;
+    border-color: #FB634F;
+}
+@media screen and (max-width:576px) {
+    .second-card{
+        margin-bottom: 1rem;
+    }
+    
+}

@@ -1,0 +1,237 @@
+<div class="top_heading">
+  <h2 class="font-bold heading">Edit Salon Profile</h2>
+</div>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">About</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="working-tab" data-bs-toggle="tab" data-bs-target="#working" type="button" role="tab" aria-controls="working" aria-selected="false">Working Hours</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="specialist-tab" data-bs-toggle="tab" data-bs-target="#specialist" type="button" role="tab" aria-controls="specialist" aria-selected="false">Specialist</button>
+  </li>
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab" aria-controls="gallery" aria-selected="false">Gallery</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="facilities-tab" data-bs-toggle="tab" data-bs-target="#facilities" type="button" role="tab" aria-controls="facilities" aria-selected="false">Facilities</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+    <div class="second-card">
+      <div class="row">
+        <div class="col-11 mx-auto">
+          <div class="about-section">
+            <form>
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <label for="">Salon Name </label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.firstname" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for="">Owner Name </label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.company_name" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for=""> Contact Number </label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.user_phone" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for=""> Email id</label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.user_email" [ngModelOptions]="{ standalone: true }" type="email" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for=""> state</label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.state" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for=""> city</label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.city" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for=""> country code</label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.country_code" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for=""> pincode</label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.pincode" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for=""> busi_address</label>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.busi_address" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <p class="font-medium mb-0">Description</p>
+                  <div class="forms-details">
+                    <input class="form-control" [(ngModel)]="model.busi_description" [ngModelOptions]="{ standalone: true }" type="text" placeholder="Enter your name" />
+                    <!-- <p>We established Carlos as a couple of grand slam organizations to the expert hair and excellence in 1992,
+                                             and right up 'til the present time we are pleased to state that our organization still stays company with
+                                              client's interests near our heart. We currently have more than 80 individuals from staff working for us 
+                                              overall divisions and in spite of the development that we have encountered despite everything we keep up 
+                                              our center family esteems and client-centered rationality.</p> -->
+                  </div>
+                </div>
+              </div>
+              <div class="btn-sec text-center pt-4 pb-4">
+                <button type="submit" class="btn primary-btn" (click)="saloonProfileUpdate()">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="working" role="tabpanel" aria-labelledby="working-tab">
+    <div class="second-card">
+      <div class="row">
+        <div class="col-11 mx-auto">
+          <div class="working-section">
+            <form action="">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <label for="">Start Time </label>
+                  <div class="forms-details">
+                    <input class="form-control" value="{{ saloon_detail?.start_time * 1000 | date: 'HH:MM' }}" type="time" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for="">End Time </label>
+                  <div class="forms-details">
+                    <input class="form-control" value="{{ saloon_detail?.end_time * 1000 | date: 'HH:MM' }}" type="time" placeholder="Enter your name" />
+                  </div>
+                </div>
+                <div class="col-12"><input type="checkbox" name="" id="" /> &nbsp; Mark as holiday</div>
+              </div>
+              <div class="btn-sec text-center pt-4 pb-4">
+                <button type="submit" class="btn primary-btn">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="specialist" role="tabpanel" aria-labelledby="specialist-tab">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-3" *ngFor="let item of serviceData; let i = index">
+        <div class="second-card">
+          <div class="dot-img d-flex justify-content-end">
+            <img src="assets/img/three-dots.png" alt="" />
+          </div>
+          <div class="inner_sec text-center">
+            <img src="assets/img/scisor.png" alt="" />
+            <h6 class="font-semi-bold">{{ item?.service_name }}</h6>
+          </div>
+          <div class="active-sec d-flex justify-content-between form-check form-switch">
+            <p class="text-muted">Inactive</p>
+            <input class="form-check-input" type="checkbox" />
+            <p>Active</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="add-specilist">
+          <form>
+            <label for="file-upload" class="custom-file-upload"> <i class="fa fa-plus"></i> Add Specialist </label>
+            <input id="file-upload" name="upload_cont_img" type="text" style="display: none" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="btn-sec text-center pt-4">
+      <button type="submit" class="btn primary-btn">Update</button>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">
+    <div class="second-card">
+      <h5 class="font-semi-bold" style="color: #fb634f">Images</h5>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="gallery-img">
+            <img src="assets/img/gallery-1.png" class="main-image" alt="" />
+            <img class="cross-img" src="assets/img/cross-img.png" alt="" />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="gallery-img">
+            <img src="assets/img/gallery-1.png" class="main-image" alt="" />
+            <img class="cross-img" src="assets/img/cross-img.png" alt="" />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="gallery-img">
+            <img src="assets/img/gallery-1.png" class="main-image" alt="" />
+            <img class="cross-img" src="assets/img/cross-img.png" alt="" />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="gallery-upload-img-sec">
+            <form>
+              <label for="file-upload" class="gallery-file-upload"> <i class="fa fa-plus"></i> Add image </label>
+              <input id="file-upload" name="upload_cont_img" type="file" (change)="onSelectFile($event)" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="font-semi-bold" style="color: #fb634f">Video</h5>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let video of videoData; let i = index">
+          <div class="gallery-img">
+            <!-- <img src="{{video?.asset_url}}" class="main-image" alt="">
+                        <img class="cross-img" src="assets/img/cross-img.png" alt=""> -->
+            <video width="220" controls>
+              <source src="{{ video?.asset_url }}" type="video/mp4" />
+              <source src="{{ video?.asset_url }}" type="video/ogg" />
+            </video>
+            <img class="cross-img" (click)="removeImage(video)" src="assets/img/cross-img.png" alt="" />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="gallery-upload-img-sec">
+            <form>
+              <label for="file-upload" class="gallery-file-upload"> <i class="fa fa-plus"></i> Add video </label>
+              <input id="file-upload" name="upload_cont_img" type="file" (change)="onSelectFile($event)" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-sec text-center pt-4">
+        <button type="submit" class="btn primary-btn">Update</button>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="facilities" role="tabpanel" aria-labelledby="facilities-tab">
+    <div class="facilities-sec">
+      <div class="second-card" *ngFor="let Amn of Aminities">
+        <div class="text-center">
+          <img src="assets/img/home-facility.png" alt="" />
+          <h6 class="font-semi-bold pt-3">{{ Amn?.name }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

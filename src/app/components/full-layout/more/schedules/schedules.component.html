@@ -1,0 +1,136 @@
+<div class="top_heading">
+  <h2 class="font-bold heading">Schedule Appointment</h2>
+</div>
+
+<div class="card">
+  <div class="secondary-card">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2">
+        <div class="img-sec">
+          <img src="assets/img/bull-horn-img.png" alt="" />
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-8 col-lg-6 col-xl-8">
+        <div class="text-section">
+          <h3 style="color: #fe594e">A Touch of Class</h3>
+          <span>
+            <p class="small-text d-flex">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              06 May 2020, 9:45 AM-10:00 AM
+            </p>
+            <p class="small-text d-flex">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              06 May 2020, 9:45 AM-10:00 AM
+            </p>
+            <p class="small-text d-flex">
+              <span class="d-flex align-items-center">
+                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                <p>2.5 km</p>
+              </span>
+              <span class="d-flex align-items-center mx-4">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <p>2 Services</p>
+              </span>
+              <span class="d-flex align-items-center">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <p>Michael Harold</p>
+              </span>
+            </p>
+          </span>
+
+          <div class="star_text">
+            <i class="fa fa-star"></i>
+            <span class="rating">4.5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="row">
+      <div class="col-sm-12 col-md-9 col-lg-9 col-xl-6 col-xxl-5 mx-auto">
+        <div class="card px-5 py-3">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-11 col-xl-10 mx-auto">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="custom-radio">
+                    <label class="plan basic-plan" for="basic">
+                      <input checked type="radio" name="plan" id="basic" />
+                      <div class="plan-content">
+                        <img loading="lazy" src="assets/img/customer.png" alt="" />
+                        <div class="plan-details">
+                          <img src="assets/img/customer-logo.png" class="" alt="" />
+                          <span>At Salons</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="custom-radio">
+                    <label class="plan complete-plan" for="complete">
+                      <input type="radio" id="complete" name="plan" />
+                      <div class="plan-content">
+                        <img loading="lazy" src="assets/img/partner.png" alt="" />
+                        <div class="plan-details">
+                          <img src="assets/img/Partner-logo.png" class="" alt="" />
+                          <span>At Home</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <form [formGroup]="seletcServiceForm">
+                <div class="row">
+                  <div class="co-12">
+                    <label for="" class="font-medium">Select Services</label>
+                    <select class="form-select" placeholder="Select Services" formControlName="name" (click)="openSelectServicepopup()" aria-label="Default select example">
+                      <!-- <option selected disabled>s</option> -->
+                    </select>
+                  </div>
+                  <div class="co-12">
+                    <label for="" class="font-medium">Select Specialist</label>
+                    <select class="form-select" (click)="openSpecilistPopup()" aria-label="Default select example">
+                      <!-- <option selected>s</option> -->
+                    </select>
+                  </div>
+                  <div class="co-12">
+                    <label for="" class="font-medium">Select Date</label>
+
+                    <div class="forms-details">
+                      <input type="date" class="form-control" placeholder="Select Date" />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label for="" class="font-medium">Start Date</label>
+
+                    <div class="forms-details">
+                      <input type="date" class="form-control" placeholder="Start Date" />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label for="" class="font-medium">End Date</label>
+
+                    <div class="forms-details">
+                      <input type="date" class="form-control" placeholder="End Date" />
+                    </div>
+                  </div>
+
+                  <div class="text-center my-4">
+                    <button class="btn primary-btn" type="submit">Next</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="card-bottom-dot d-flex justify-content-end">
+          <img src="assets/img/rectangle.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<app-logged-in-header (toggleValue)="getData($event)" (colourChange)="getColourChange($event)"></app-logged-in-header>
+<div class="d-flex">
+    <div class="side-bar" [ngClass]="toggle ? 'toggle_class' : 'toggle_classAfter'">
+        <app-logged-in-sidebar>
+        </app-logged-in-sidebar>
+    </div>
+    <div class="container-fluid p-4"  [ngClass]="toggle ? 'toggle_sidebar' : 'toggle_sidebarAfter'"  style="background-color: #F9F9F9;">
+        <router-outlet></router-outlet>
+    </div>
+</div>

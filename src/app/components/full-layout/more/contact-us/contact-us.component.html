@@ -1,0 +1,49 @@
+<div class="top_heading ">
+    <h2 class="font-bold heading">Contact Us</h2>
+</div>
+<div class="second-card d-flex align-items-center justify-content-center">
+    <form [formGroup]="contactUsForm">
+        <div class="forms-details">
+            <input class="form-control for" formControlName="name" type="text" placeholder="Name"
+                [ngClass]="{ 'is-invalid': submitted && f['name'].errors }" />
+            <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                <div *ngIf="f['name'].errors['required']">Name is required</div>
+            </div>
+        </div>
+
+        <div class="forms-details mt-3">
+            <input class="form-control for" formControlName="country_code" type="text" placeholder="Phone Number"
+                [ngClass]="{ 'is-invalid': submitted && f['country_code'].errors }" />
+            <div *ngIf="submitted && f['country_code'].errors" class="invalid-feedback">
+                <div *ngIf="f['country_code'].errors['required']">country code is required</div>
+            </div>
+        </div>
+
+        <div class="forms-details mt-3">
+            <input class="form-control for" formControlName="phone_no" type="text" placeholder="Phone Number"
+                [ngClass]="{ 'is-invalid': submitted && f['phone_no'].errors }" />
+            <div *ngIf="submitted && f['phone_no'].errors" class="invalid-feedback">
+                <div *ngIf="f['phone_no'].errors['required']">phone_no is required</div>
+            </div>
+        </div>
+
+        <div class="forms-details mt-3">
+            <input class="form-control" formControlName="email" type="email" placeholder="Email"
+                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+            </div>
+        </div>
+        <div class="forms-details mt-3">
+            <textarea class="form-control" formControlName="message" name="" placeholder="Message"
+                [ngClass]="{ 'is-invalid': submitted && f['message'].errors }"></textarea>
+            <div *ngIf="submitted && f['message'].errors" class="invalid-feedback">
+                <div *ngIf="f['message'].errors['required']">Message is required</div>
+            </div>
+        </div>
+        <div class="text-center my-4">
+            <button class="btn primary-btn w-100" type="submit" (click)="contactUs()">submit</button>
+        </div>
+    </form>
+</div>

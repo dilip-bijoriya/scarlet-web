@@ -1,0 +1,54 @@
+.banner_section {
+     background:  url('/assets/img/banner_salons.png')  ;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    min-height: 362px;
+    max-height: 362px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    .heading_text {
+        position: relative;
+        left: 90px;
+        color: white;
+    }
+
+    .heading {
+        letter-spacing: 2.59px;
+        color: #FFFFFF;
+        opacity: 1;
+        border-bottom: 3px solid #FE594E;
+    }
+ 
+}
+
+.serach-field{
+    padding: 2rem 0;
+}
+.primary-btn {
+    white-space: nowrap;
+     font: 14px/22px "Euclid_Circular_B_font_medium";
+     padding: 15px 3rem;
+}
+
+@media screen and (min-width: 768px){
+    .sle{
+            flex: 0 0 auto;
+            width: 16.33333333%;
+            margin-top: 11px;
+        }
+}
+
+@media screen and (min-width: 375px) and (max-width: 991px)
+{
+    .res {
+            margin-top: 20px;
+        }
+}
+@media screen and (min-width: 992px) and (max-width: 1325px) {
+    .res-bt {
+        margin-top: 11px;
+            margin-left: 55px;
+    }
+}

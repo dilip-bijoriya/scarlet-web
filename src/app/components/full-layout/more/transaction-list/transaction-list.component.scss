@@ -1,0 +1,41 @@
+.saloon_list_section {
+    padding-bottom: 3rem;
+}
+
+.main_section {
+    padding: 1rem;
+}
+
+.top_heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+
+    .heading {
+        letter-spacing: 1.73px;
+        line-height: 45px;
+        position: relative;
+    }
+    .view_btn{
+        .secondry-btn{
+            padding: 15px 1rem;
+        }
+    }
+
+    .heading::after {
+        content: "";
+        border: 2px solid #FB634F;
+        display: block;
+        position: absolute;
+        left: 0;
+        margin: auto;
+        width: 100px;
+        transform: -50%, -50%;
+    }
+
+
+}
+
+th{
+    color: #7E8794;
+}

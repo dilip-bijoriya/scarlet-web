@@ -1,0 +1,116 @@
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+   }
+.section {
+    position: relative;
+    .share_app_section {
+        background-color: #ffe3e1;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        width: 95%;
+        top: -100px;
+        position: absolute;
+        border-bottom-right-radius: 50px;
+        transform: translate(0px, 0px);
+    }
+}
+.share_section{
+    display: flex;
+}
+.footer_section {
+    margin-top: 100px;
+    background-color: #FE594E !important;
+    min-height: 400px;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+    .meanu_sec {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            li {
+                padding: 0 1rem;
+                color: #ffffff;
+            }
+        }
+    }
+    
+}
+
+.start_text h3{
+
+    color: #FE594E;
+}
+.iphone i{
+position: absolute;
+    margin-top: 10px;
+    margin-left: 9px;
+    font-size: 37px;
+    color: #FFFFFF;
+}
+
+.btn-left{
+    font-size: 8px;
+        line-height: 0px;
+        margin-top: 11px;
+}
+.btn-app{
+    font-size: 19px;
+        line-height: 0;
+}
+.mrleft{
+    margin-left: 10px;
+}
+.icon-center{
+    margin-left: 120px;
+}
+hr{
+    color: #FFFFFF;
+    width: 100%;
+}
+.copy{
+        color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+}
+@media   (max-width:576px) {
+    .share_section{
+       
+    }
+    .section   .share_app_section {
+        background-color: #ffe3e1;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        width: 95%;
+        top: -149px;
+        position: absolute;
+        border-bottom-right-radius: 50px;
+        transform: translate(0px, 0px);
+    }
+    .footer_section {
+        margin-top: 100px;
+        background-color: #FE594E !important;
+        min-height: 500px;
+        max-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon-center{
+        margin-left: 0;
+    }
+    .app_store{
+        margin-bottom: 1rem;
+    }
+    .mrleft {
+        margin-left: 10px;
+    }
+  
+}

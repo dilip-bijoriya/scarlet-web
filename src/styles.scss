@@ -1,0 +1,220 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@font-face {
+    font-family: 'Euclid_Circular_B_font_regular';
+    src: url('./fonts/Euclid\ Circular\ B\ Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Euclid_Circular_B_font_bold';
+    src: url('./fonts/Euclid\ Circular\ B\ Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Euclid_Circular_B_font_semi_bold';
+    src: url('./fonts/Euclid\ Circular\ B\ SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Euclid_Circular_B_font_medium';
+    src: url('./fonts/Euclid\ Circular\ B\ Medium.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.font-regular {
+    font-family: 'Euclid_Circular_B_font_regular';
+}
+
+.font-bold {
+    font-family: 'Euclid_Circular_B_font_bold';
+}
+
+.font-semi-bold {
+    font-family: 'Euclid_Circular_B_font_semi_bold';
+}
+
+.font-medium {
+    font-family: 'Euclid_Circular_B_font_medium';
+}
+
+$primary-color: #FE594E;
+.primary-btn {
+    padding: .4rem 3rem;
+    background: #FE594E;
+    color: white;
+    box-shadow: 0px 0px 17px #FE594E3B;
+    border-radius: 5px;
+    letter-spacing: 0.52px;
+    font: 18px/22px 'Euclid_Circular_B_font_medium';
+}
+
+.primary-btn:hover {
+    background: white;
+    color: #FE594E;
+}
+
+.secondry-btn {
+    border: 1px solid #FE594E;
+    padding: .4rem 3rem;
+    color: #FE594E;
+    box-shadow: 0px 0px 17px #FE594E3B;
+    border-radius: 5px;
+    letter-spacing: 0.52px;
+    font: 18px/22px 'Euclid_Circular_B_font_medium';
+}
+
+.secondry-btn:hover {
+    background: #FE594E;
+    color: white;
+}
+
+.card {
+    box-shadow: 0px 0px 49px #12045317;
+    opacity: 1;
+}
+
+.card-bottom-dot {
+    position: relative;
+    z-index: -1;
+    bottom: 50px;
+    right: -50px;
+}
+
+.card:hover {
+    border: 1px solid rgba(238, 143, 132, 0.384);
+    box-shadow: 0 13px 44px rgba(255, 75, 54, 0.2) !important;
+}
+
+.text-single-line {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.form-control {
+    border: 0;
+    padding: 0;
+    opacity: 0.57;
+    &:focus {
+        box-shadow: none;
+        background-color: transparent;
+        font-weight: 400;
+        opacity: 1;
+        color: black;
+    }
+}
+
+.forms-details {
+    background: white;
+    box-shadow: 0px 0px 49px #00000017;
+    padding: 15px 4px;
+    border-radius: 10px;
+    i {
+        color: #212529;
+        opacity: 0.57;
+    }
+}
+
+.form-select {
+    border: white;
+    box-shadow: 0px 0px 49px #00000017;
+    outline: none;
+    padding: 15px 4px;
+    border-radius: 10px;
+}
+
+// tringle css
+.nav-item {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 42%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #fff;
+    clear: both;
+}
+
+.nav-tabs .nav-link {
+    color: #000;
+}
+
+.nav-tabs .nav-link.active {
+    border: none !important;
+    color: #fb634f;
+}
+
+.nav-tabs .nav-link.active:hover {
+    border: none !important;
+}
+
+ngb-modal-window.d-block.fade.modal.show {
+    top: 20% !important;
+}
+
+@media screen and (max-width:576px) {
+    .btn {
+        font-size: small;
+    }
+    .secondry-btn {
+        padding: 0.4rem 1rem;
+    }
+    .primary-btn {
+        padding: 0.4rem 1rem;
+    }
+    .card-bottom-dot {
+        display: none;
+    }
+    .card-bottom-dot {
+        position: relative;
+        z-index: -1;
+        bottom: 50px;
+        right: 0px;
+    }
+}
+
+.second-card {
+    padding: 1rem;
+    box-shadow: 0px 0px 49px #12045317;
+    opacity: 1;
+    border-radius: 3px;
+}
+
+.popup-modal {
+    padding: 5px;
+    background: #fbfafa;
+    .modal-header {
+        border-bottom: none;
+        h3 {
+            margin: 0 auto;
+        }
+    }
+    button.close {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        padding: 0px 6px 2px;
+        font-weight: bolder;
+        margin: 0px;
+        border-radius: 50%;
+        color: orange;
+        border: 1px;
+    }
+}

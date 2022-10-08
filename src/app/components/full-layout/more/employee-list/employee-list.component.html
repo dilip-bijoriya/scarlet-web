@@ -1,0 +1,31 @@
+<div class="row top_heading">
+  <div class="col-sm-12 col-md-8">
+    <h2 class="font-bold heading">Employee list</h2>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <button class="btn primary-btn" (click)="addEmployeePopup()">Add</button>
+  </div>
+</div>
+
+<div class="table-section table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="font-medium">Image</th>
+        <th class="font-medium">Employee Name</th>
+        <th class="font-medium">Employee Skill</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of employee_list; let i = index">
+        <td style="color: #474a5c">
+          <img src="{{ item?.emp_img }}" style="height: 20px; width: 20px" alt="" />
+        </td>
+        <td style="color: #474a5c">{{ item?.name }}</td>
+        <td style="color: #474a5c">{{ item?.specialist }}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

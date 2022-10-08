@@ -1,0 +1,48 @@
+<div class="popup-modal">
+    <div class="modal-header  text-center">
+        <h5 class="modal-title">Add Service</h5>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form action="" [formGroup]="serviceForm">
+            <div class="text-sec">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="forms-details">
+                            <label for="">Service Name</label>
+                            <input type="text" formControlName="service_name" class="form-control"
+                                placeholder="Service Name"
+                                [ngClass]="{ 'is-invalid': submitted && f['service_name'].errors }" />
+                            <div *ngIf="submitted && f['service_name'].errors" class="invalid-feedback">
+                                <div *ngIf="f['service_name'].errors['required']">service name is required</div>
+                            </div>
+                        </div>
+                        <div class="forms-details">
+                            <label for="">Price</label>
+                            <input type="number" formControlName="price" class="form-control" placeholder="Price"
+                                [ngClass]="{ 'is-invalid': submitted && f['price'].errors }" />
+                            <div *ngIf="submitted && f['price'].errors" class="invalid-feedback">
+                                <div *ngIf="f['price'].errors['required']">Price is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="forms-details">
+                            <label for="">Service Times</label>
+                            <input type="text" formControlName="times" class="form-control" placeholder="Times"
+                                [ngClass]="{ 'is-invalid': submitted && f['times'].errors }" />
+                            <div *ngIf="submitted && f['times'].errors" class="invalid-feedback">
+                                <div *ngIf="f['times'].errors['required']">Times is required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-sec text-center">
+                <button type="submit" class="btn primary-btn" (click)="addservice()">Done</button>
+            </div>
+        </form>
+    </div>
+</div>

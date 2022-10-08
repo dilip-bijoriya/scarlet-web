@@ -1,0 +1,38 @@
+nav.navbar.navbar-expand-lg.navbar-light {
+    padding: 1.5rem 0;
+}
+
+li.nav-item {
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.nav-item .active::after {
+    content: "";
+    border: 2px solid #FB634F;
+    display: block;
+    position: absolute;
+    left: 0;
+    margin: auto;
+    width: 100px;
+    transform: -50%, -50%;
+}
+
+.font-color {
+    color: #FE594E;
+}
+
+button.btn.primary-btn {
+    margin-bottom: 1rem;
+}
+
+.img-fliud {
+    cursor: pointer;
+}
+
+.row.navbar-sticky {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 9999;
+}
